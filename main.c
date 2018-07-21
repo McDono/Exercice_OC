@@ -1,3 +1,5 @@
+//Modification pour GitHub
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <SDL/SDL.h>
@@ -20,7 +22,7 @@ int main(int argc, char *argv[])
 	SDL_Init(SDL_INIT_VIDEO);
 	TTF_Init();
 
-	//Init de l'écran
+	//Init de l'ï¿½cran
 	ecran = SDL_SetVideoMode(640, 480, 32, SDL_HWSURFACE);
 	SDL_WM_SetCaption("Deuxieme essaie au compteur", NULL);
 	SDL_FillRect(ecran, NULL, SDL_MapRGB(ecran->format, 255, 255, 255));
@@ -45,7 +47,7 @@ int main(int argc, char *argv[])
 			switch (event.key.keysym.sym)
 			{
 			case SDLK_SPACE:
-				space_enfonce = 0; //Space n'est plus appuyé
+				space_enfonce = 0; //Space n'est plus appuyï¿½
 				break;
 			}
 			break;
@@ -56,11 +58,11 @@ int main(int argc, char *argv[])
 				continuer = 0;
 				break;
 			case SDLK_SPACE:
-				if (!space_enfonce) //Si space n'est pas déjà appuyé
+				if (!space_enfonce) //Si space n'est pas dï¿½jï¿½ appuyï¿½
 				{
-					space_enfonce = 1; //On signal que maintenant space est appuyé
+					space_enfonce = 1; //On signal que maintenant space est appuyï¿½
 
-					if (pause) //Si le jeu est en pause, on met fin à la pause
+					if (pause) //Si le jeu est en pause, on met fin ï¿½ la pause
 					{
 						pause = 0;
 					}
@@ -79,7 +81,7 @@ int main(int argc, char *argv[])
 		{
 			tempsActuel = SDL_GetTicks(); //On recup le temps
 
-			if (tempsActuel - tempsPrecedent >= 100) //Si au mmoins 100ms se sont écoulé depuis la derniere modif de temps
+			if (tempsActuel - tempsPrecedent >= 100) //Si au mmoins 100ms se sont ï¿½coulï¿½ depuis la derniere modif de temps
 			{
 				compteur += 100; //On rajoute 100ms au compteur
 				sprintf(temps, "Temps: %d ms", compteur); //On ajoute le compteur dans la string
